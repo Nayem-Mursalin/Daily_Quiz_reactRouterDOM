@@ -1,32 +1,33 @@
 import React from 'react';
 import './QuizQuestion.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const QuizQuestion = ({ qs, id }) => {
-    const { question, correctAnswer, options } = qs;
-    let mistake = 0;
-    let rightAns = 0;
+    const { question, correctAnswer, options, rightAns, mistake } = qs;
+
     //console.log(qs);
     const showAns = (ans) => {
-        alert(ans);
+        toast(`Right Answer is: ${ans}`);
     }
     const checkAns = (e) => {
         //console.log(e);
         if (e === correctAnswer) {
-            ++rightAns;
+            //rightAns++;
             console.log(rightAns);
-            alert('Yes');
+            toast(`Yes!, You Pressed the Right Answer.`);
         }
         else {
-            ++mistake;
-            console.log(mistake);
-            alert('Wrong Ans');
+            //mistake++;
+            toast(`No, That is Wrong.`);
         }
     }
 
     return (
         <div className='quiz-question'>
             <h4>Question: {id} {question}</h4>
-            <button onClick={() => showAns(correctAnswer)}> See Ans</button>
+            <button onClick={() => showAns(correctAnswer)}>See Ans</button>
+            <ToastContainer />
             <div className='quiz-ans'>
 
                 <div className='quiz-option'>
