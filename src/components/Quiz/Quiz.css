@@ -2,11 +2,11 @@
     border: 1px solid red;
     margin: 20px;
     padding-bottom: 20px;
-    width: 500px;
+    width: 20rem;
     background-color: rgb(234, 246, 255);
 }
 .quiz img{
-    width: 250px;
+    width: 10rem;
 }
 .quiz button{
     text-decoration: none;
