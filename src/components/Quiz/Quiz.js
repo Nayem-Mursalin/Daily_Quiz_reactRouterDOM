@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Quiz.css'
 
 const Quiz = ({ quiz }) => {
@@ -7,7 +8,7 @@ const Quiz = ({ quiz }) => {
         <div className='quiz'>
             <img src={logo} alt='logo'></img>
             <h2>{name}</h2>
-            <button>Start {name} Quiz</button>
+            <button><Link to='/quiz'>Start {name} Quiz</Link></button>
         </div>
     );
 };
