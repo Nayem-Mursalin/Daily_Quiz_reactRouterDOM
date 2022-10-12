@@ -4,3 +4,8 @@
     margin-top: 30px;
     padding-top: 30px;
 }
+.upper-home{
+    background-color: rgb(183, 255, 231);
+    height: 100px;
+    border: 1px solid lawngreen;
+}

@@ -1,8 +1,16 @@
-.header{
-    margin-top: 20px;
+.header-nav {
+    padding: 20px;
+    margin-left: 70%;
+    color:white;
 }
-.header a{
+.header-nav a{
     text-decoration: none;
     margin-right: 15px;
     padding: 2px 5px;
+}
+
+.header{
+    padding: 0px 5%;
+    display: flex;
+    background-color: rgb(199, 148, 247);
 }

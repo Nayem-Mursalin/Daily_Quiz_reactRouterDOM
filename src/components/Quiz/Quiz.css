@@ -3,7 +3,14 @@
     margin: 20px;
     padding-bottom: 20px;
     width: 500px;
+    background-color: rgb(234, 246, 255);
 }
 .quiz img{
     width: 250px;
+}
+.quiz button{
+    text-decoration: none;
+    background-color: bisque;
+    border: 1px dotted red;
+    padding: 5px 10px;
 }
