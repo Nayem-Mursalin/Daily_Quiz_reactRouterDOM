@@ -17,7 +17,7 @@ const QuizQuestion = ({ qs, id }) => {
         if (e === correctAnswer) {
             //rightAns++;
             console.log(rightAns);
-            toast(`Yes!, You Pressed the Right Answer.`);
+            toast(`Yes!, You Choose the Right Answer.`);
         }
         else {
             //mistake++;
