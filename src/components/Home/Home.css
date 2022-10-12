@@ -1,6 +1,6 @@
 .quiz-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 30px;
     padding-top: 30px;
     align-items: center;
@@ -12,7 +12,13 @@
     border: 1px solid lawngreen;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 800px) {
+    .quiz-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .quiz-container{
         grid-template-columns: repeat(1,1fr);
     }

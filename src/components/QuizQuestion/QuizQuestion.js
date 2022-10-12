@@ -4,6 +4,9 @@ import './QuizQuestion.css'
 const QuizQuestion = ({ qs, id }) => {
     const { question, correctAnswer, options } = qs;
     //console.log(qs);
+    const showAns = (ans) => {
+        alert(ans);
+    }
     const checkAns = (e) => {
         //console.log(e);
         if (e === correctAnswer) {
@@ -17,6 +20,7 @@ const QuizQuestion = ({ qs, id }) => {
     return (
         <div className='quiz-question'>
             <h4>Question: {id} {question}</h4>
+            <button onClick={() => showAns(correctAnswer)}>Ans</button>
             <div className='quiz-ans'>
                 <p>Answer</p>
 
