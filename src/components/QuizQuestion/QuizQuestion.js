@@ -3,6 +3,8 @@ import './QuizQuestion.css'
 
 const QuizQuestion = ({ qs, id }) => {
     const { question, correctAnswer, options } = qs;
+    let mistake = 0;
+    let rightAns = 0;
     //console.log(qs);
     const showAns = (ans) => {
         alert(ans);
@@ -10,9 +12,13 @@ const QuizQuestion = ({ qs, id }) => {
     const checkAns = (e) => {
         //console.log(e);
         if (e === correctAnswer) {
-            alert('Yes')
+            ++rightAns;
+            console.log(rightAns);
+            alert('Yes');
         }
         else {
+            ++mistake;
+            console.log(mistake);
             alert('Wrong Ans');
         }
     }
@@ -20,21 +26,19 @@ const QuizQuestion = ({ qs, id }) => {
     return (
         <div className='quiz-question'>
             <h4>Question: {id} {question}</h4>
-            <button onClick={() => showAns(correctAnswer)}>Ans</button>
+            <button onClick={() => showAns(correctAnswer)}> See Ans</button>
             <div className='quiz-ans'>
-                <p>Answer</p>
 
                 <div className='quiz-option'>
-                    <div>
-                        {
-                            qs.options.map(option =>
-                                <label className='option' htmlFor='1' onClick={() => checkAns(option)}>
-                                    <input type='radio' name='action'></input>
-                                    {option}
-                                </label>
-                            )
-                        }
-                    </div>
+                    {
+                        qs.options.map(option =>
+                            <label className='option' htmlFor='1' onClick={() => checkAns(option)}>
+                                <input type='radio' name='action'></input>
+                                {option}
+                            </label>
+                        )
+                    }
+
 
                 </div>
             </div>

@@ -9,13 +9,18 @@ const Statistics = () => {
     return (
         <div>
             <h2>This is Statistics Page</h2>
-            <LineChart width={500} height={400} data={stat.data}>
+
+            <LineChart width={400} height={320} data={stat.data}>
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Line type="monotone" dataKey="total" stroke="#82ca9d" />
                 <Tooltip></Tooltip>
             </LineChart>
-        </div>
+
+
+
+
+        </div >
     );
 };
 export default Statistics;
