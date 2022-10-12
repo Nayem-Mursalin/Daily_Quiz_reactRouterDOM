@@ -6,7 +6,7 @@ import './MyQuiz.css'
 const MyQuiz = () => {
     let quesNo = 0;
     const myQuiz = useLoaderData();
-    console.log(myQuiz);
+    //console.log(myQuiz);
     return (
         <div className='quiz-outlet'>
             <h2>{myQuiz.data.name} Quiz</h2>
